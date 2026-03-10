@@ -1616,3 +1616,303 @@ details.faq-item[open] summary::after {
 @media (max-width: 480px) {
   .regarding-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== AD LANDING PAGES (/lp/*) ===== */
+.lp-ad-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.lp-ad-nav-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.lp-ad-price {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.lp-ad-price-note {
+  font-size: 0.78rem;
+  color: var(--gray-light);
+}
+
+/* Hero: two-col grid, copy left, form right */
+.lp-ad-hero {
+  background: var(--cream);
+  padding: 64px 0 72px;
+}
+
+.lp-ad-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.lp-ad-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.lp-ad-copy h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 18px;
+}
+
+.lp-ad-sub {
+  font-size: 1.05rem;
+  color: var(--gray);
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+
+/* Proof list */
+.lp-ad-proof {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.lp-proof-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--black-light);
+  line-height: 1.5;
+}
+
+.lp-proof-icon {
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.lp-proof-item em {
+  color: var(--gray);
+  font-style: normal;
+}
+
+/* Mini trust bar */
+.lp-ad-trust {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--gray);
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.lp-trust-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* Form panel */
+.lp-ad-form-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.lp-ad-form-header {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lp-ad-form-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.lp-ad-form-header p {
+  font-size: 0.88rem;
+  color: var(--gray);
+}
+
+/* Interior sections */
+.lp-ad-section {
+  padding: 72px 0;
+}
+
+.lp-ad-section-alt {
+  background: var(--cream);
+}
+
+.lp-ad-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--black);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Steps */
+.lp-ad-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.lp-ad-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.lp-ad-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lp-ad-step h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.lp-ad-step p {
+  font-size: 0.92rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Situations grid (codice fiscale) */
+.lp-situations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.lp-situation {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+}
+
+.lp-situation h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.lp-situation p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Bottom CTA */
+.lp-ad-bottom-cta {
+  background: var(--black);
+}
+
+.lp-ad-bottom-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.lp-ad-bottom-cta p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+.lp-ad-micro {
+  font-size: 0.78rem !important;
+  color: rgba(255,255,255,0.45) !important;
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Minimal footer */
+.lp-ad-footer {
+  padding: 20px 32px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--gray-light);
+  background: var(--white);
+}
+
+.lp-ad-footer a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.lp-ad-footer a:hover { color: var(--orange); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .lp-ad-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .lp-ad-nav { padding: 16px 20px; }
+  .lp-situations-grid { grid-template-columns: 1fr; }
+}
