@@ -14,15 +14,6 @@ export default function Home() {
 
             {/* Z position 1 + 3: visual proof — left column */}
             <div className="hero-visual">
-              <div className="hero-photo-wrap">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/hero-letter.jpg"
-                  alt="Italian government letter on a desk"
-                  className="hero-photo"
-                />
-                <div className="hero-photo-overlay" />
-              </div>
               <div className="hero-panel">
                 <div className="hero-panel-label">Recent tasks handled</div>
 
