@@ -21,8 +21,8 @@ export default function LpCallForYou() {
           {/* Left: copy */}
           <div className="lp-ad-copy">
             <div className="lp-ad-eyebrow">For foreigners in Italy</div>
-            <h1>Need someone to call an Italian office for you?</h1>
-            <p className="lp-ad-sub">Tell us who to call and what you need. We make the call in Italian, handle the conversation, and send you a full written summary in English.</p>
+            <h1>He spent 40 minutes on hold with Enel. Got transferred twice. Then the line went dead.</h1>
+            <p className="lp-ad-sub">He submitted a DaFigaro call request that afternoon. By evening he had a written summary of what was agreed and what happens next. €49.</p>
 
             <div className="lp-ad-proof">
               <div className="lp-proof-item">
@@ -97,8 +97,8 @@ export default function LpCallForYou() {
       {/* ── BOTTOM CTA ── */}
       <section className="lp-ad-section lp-ad-bottom-cta">
         <div className="container-narrow" style={{ textAlign: 'center' }}>
-          <h2>Still dreading that call?</h2>
-          <p>Tell us who to call. €49. We handle it within 24–48 hours.</p>
+          <h2>That call isn&apos;t going to make itself.</h2>
+          <p>Tell us who to call and what you need. We handle it within 24–48 hours. €49.</p>
           <Link href="#submit" className="btn-primary" style={{ fontSize: '1.05rem', padding: '18px 36px' }}>
             Tell Us Who to Call →
           </Link>

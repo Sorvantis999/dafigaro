@@ -21,8 +21,8 @@ export default function LpCodiceFiscale() {
           {/* Left: copy */}
           <div className="lp-ad-copy">
             <div className="lp-ad-eyebrow">For foreigners in Italy</div>
-            <h1>Stuck trying to get your codice fiscale?</h1>
-            <p className="lp-ad-sub">Getting blocked, confused, or turned away? Tell us your situation. We assess it, tell you the right path, and coordinate the process — whether you&apos;re in Italy or applying from abroad.</p>
+            <h1>Everything in Italy starts with a codice fiscale. Without one, you&apos;re stuck at zero.</h1>
+            <p className="lp-ad-sub">Can&apos;t open the bank account. Can&apos;t sign the lease. Can&apos;t register for anything. Tell us your situation — we find the right path and coordinate everything until it&apos;s done.</p>
 
             <div className="lp-ad-proof">
               <div className="lp-proof-item">
@@ -122,8 +122,8 @@ export default function LpCodiceFiscale() {
       {/* ── BOTTOM CTA ── */}
       <section className="lp-ad-section lp-ad-bottom-cta">
         <div className="container-narrow" style={{ textAlign: 'center' }}>
-          <h2>Still waiting on your codice fiscale?</h2>
-          <p>Describe your situation. We&apos;ll tell you the right path and exact price before you pay anything.</p>
+          <h2>You can&apos;t start anything in Italy without it.</h2>
+          <p>Tell us your situation. We confirm the right path and exact price before you pay.</p>
           <Link href="#submit" className="btn-primary" style={{ fontSize: '1.05rem', padding: '18px 36px' }}>
             Start Codice Fiscale Request →
           </Link>

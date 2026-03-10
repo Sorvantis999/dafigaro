@@ -21,8 +21,8 @@ export default function LpExplainLetter() {
           {/* Left: copy */}
           <div className="lp-ad-copy">
             <div className="lp-ad-eyebrow">For foreigners in Italy</div>
-            <h1>Got a letter from Italy you don&apos;t understand?</h1>
-            <p className="lp-ad-sub">Upload it. A real person reads it, explains exactly what it means, and tells you what to do next — in plain English.</p>
+            <h1>She got a letter from the Agenzia delle Entrate. She didn&apos;t open it for a week.</h1>
+            <p className="lp-ad-sub">Then she uploaded it to DaFigaro. Six hours later she knew exactly what it was, what it wasn&apos;t, and the one thing she needed to do. €29.</p>
 
             <div className="lp-ad-proof">
               <div className="lp-proof-item">
@@ -97,8 +97,8 @@ export default function LpExplainLetter() {
       {/* ── BOTTOM CTA ── */}
       <section className="lp-ad-section lp-ad-bottom-cta">
         <div className="container-narrow" style={{ textAlign: 'center' }}>
-          <h2>Still looking at that letter?</h2>
-          <p>Upload it now. €29. Response within 24–48 hours.</p>
+          <h2>That letter isn&apos;t going away.</h2>
+          <p>Upload it now. €29. You&apos;ll know exactly what it means and what to do within 24–48 hours.</p>
           <Link href="#submit" className="btn-primary" style={{ fontSize: '1.05rem', padding: '18px 36px' }}>
             Upload Your Letter →
           </Link>
