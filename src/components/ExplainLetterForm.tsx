@@ -2,7 +2,7 @@
 
 import { useState, useRef, DragEvent } from 'react'
 
-type FormState = 'idle' | 'uploading' | 'success' | 'error'
+type FormState = 'idle' | 'submitting' | 'redirecting' | 'error'
 
 export default function ExplainLetterForm() {
   const [state, setState] = useState<FormState>('idle')
@@ -20,34 +20,47 @@ export default function ExplainLetterForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setState('uploading')
+    setState('submitting')
     setErrorMsg('')
 
     const form = e.currentTarget
+    const name    = (form.elements.namedItem('name')    as HTMLInputElement).value
+    const email   = (form.elements.namedItem('email')   as HTMLInputElement).value
+    const context = (form.elements.namedItem('context') as HTMLTextAreaElement).value
+
+    // Step 1: Send form data + file to team via email (fire and forget — don't block on this)
     const formData = new FormData(form)
     formData.set('serviceType', 'explain-letter')
     if (file) formData.set('file', file)
+    fetch('/api/submit', { method: 'POST', body: formData }).catch(console.error)
 
+    // Step 2: Create Stripe Checkout Session and redirect
     try {
-      const res = await fetch('/api/submit', { method: 'POST', body: formData })
+      setState('redirecting')
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          serviceType:   'explain-letter',
+          customerName:  name,
+          customerEmail: email,
+          description:   context,
+        }),
+      })
       const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Unknown error')
-      setState('success')
+      if (!res.ok) throw new Error(data.error || 'Checkout error')
+      if (data.url) {
+        window.location.href = data.url
+      } else {
+        throw new Error('No checkout URL returned')
+      }
     } catch (err: unknown) {
       setState('error')
-      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong.')
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
     }
   }
 
-  if (state === 'success') {
-    return (
-      <div className="form-success">
-        <div className="success-icon">✓</div>
-        <h3>Request received.</h3>
-        <p>A real person on our team will review your letter and respond within 24–48 business hours. Check your inbox for a confirmation.</p>
-      </div>
-    )
-  }
+  const busy = state === 'submitting' || state === 'redirecting'
 
   return (
     <form className="submit-form" onSubmit={handleSubmit}>
@@ -117,10 +130,12 @@ export default function ExplainLetterForm() {
         <div className="form-error">{errorMsg}</div>
       )}
 
-      <button type="submit" className="btn-primary form-submit" disabled={state === 'uploading'}>
-        {state === 'uploading' ? 'Sending…' : 'Submit Request → €29'}
+      <button type="submit" className="btn-primary form-submit" disabled={busy}>
+        {state === 'submitting'  ? 'Preparing…'          :
+         state === 'redirecting' ? 'Redirecting to payment…' :
+         'Continue to Payment → €29'}
       </button>
-      <p className="form-note">You won&apos;t be charged until we confirm we can help. We&apos;ll send a payment link with our response.</p>
+      <p className="form-note">Secure payment via Stripe. Work begins as soon as payment is confirmed.</p>
     </form>
   )
 }

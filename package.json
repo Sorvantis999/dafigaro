@@ -21,6 +21,6 @@
     "typescript": "^5"
   },
   "optionalDependencies": {
-    "stripe": "^16.0.0"
+    "stripe": "^16.12.0"
   }
 }
