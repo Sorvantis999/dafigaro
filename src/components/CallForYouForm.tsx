@@ -26,10 +26,10 @@ export default function CallForYouForm() {
     formData.set('serviceType', 'call-for-you')
     fetch('/api/submit', { method: 'POST', body: formData }).catch(console.error)
 
-    // Step 2: Create Stripe Checkout Session and redirect
+    // Step 2: Create PaymentIntent and redirect to branded /pay page
     try {
       setState('redirecting')
-      const res = await fetch('/api/checkout', {
+      const res = await fetch('/api/payment-intent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -41,11 +41,12 @@ export default function CallForYouForm() {
         }),
       })
       const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Checkout error')
-      if (data.url) {
-        window.location.href = data.url
+      if (!res.ok) throw new Error(data.error || 'Payment setup failed')
+      if (data.clientSecret) {
+        sessionStorage.setItem('pi_secret_call-for-you', data.clientSecret)
+        window.location.href = '/pay?service=call-for-you'
       } else {
-        throw new Error('No checkout URL returned')
+        throw new Error('Payment setup failed')
       }
     } catch (err: unknown) {
       setState('error')

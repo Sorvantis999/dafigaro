@@ -49,6 +49,11 @@ export async function POST(req: NextRequest) {
       await handleCompletedCheckout(stripe, session)
       break
     }
+    case 'payment_intent.succeeded': {
+      const intent = event.data.object as Stripe.PaymentIntent
+      await handleSucceededPaymentIntent(intent)
+      break
+    }
     case 'payment_intent.payment_failed': {
       const intent = event.data.object as Stripe.PaymentIntent
       console.warn('[webhook] payment failed:', intent.id, intent.last_payment_error?.message)
@@ -133,6 +138,73 @@ async function handleCompletedCheckout(stripe: Stripe, session: Stripe.Checkout.
         <p style="font-family:Arial,sans-serif;font-size:11px;color:#7A7A7A;">
           DaFigaro · hello@dafigaro.com · Reference: ${session.id}
         </p>
+      `,
+    })
+  }
+}
+
+async function handleSucceededPaymentIntent(intent: Stripe.PaymentIntent) {
+  const {
+    serviceType  = '',
+    customerName = '',
+    customerEmail: metaEmail = '',
+    description  = '',
+    phone        = '',
+    situation    = '',
+  } = intent.metadata || {}
+
+  const customerEmail = metaEmail || intent.receipt_email || ''
+  const serviceLabel  = SERVICE_LABELS[serviceType] || serviceType
+  const amountEur     = `€${(intent.amount / 100).toFixed(2)}`
+
+  console.log('[webhook] payment_intent.succeeded:', { id: intent.id, serviceType, customerEmail, amountEur })
+
+  const r = getResend()
+  if (!r) {
+    console.warn('[webhook] Resend not configured — skipping emails')
+    return
+  }
+
+  const detailRows = [
+    description && `<tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;width:160px;">Description</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${description}</td></tr>`,
+    phone       && `<tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Phone / Number</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${phone}</td></tr>`,
+    situation   && `<tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Situation</td><td style="padding:8px 12px;">${situation.replace(/\n/g, '<br>')}</td></tr>`,
+  ].filter(Boolean).join('')
+
+  await r.emails.send({
+    from:    `DaFigaro <${FROM_EMAIL}>`,
+    to:      NOTIFY_EMAIL,
+    subject: `[PAID ✓] ${serviceLabel} — ${customerName}`,
+    html: `
+      <h2 style="color:#D87A4A;font-family:Georgia,serif;">Payment Confirmed — Begin Work</h2>
+      <p style="font-family:Arial,sans-serif;font-size:14px;color:#333;">Payment received. This client is ready to go.</p>
+      <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;">
+        <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;width:160px;">Service</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${serviceLabel}</td></tr>
+        <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Amount</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${amountEur}</td></tr>
+        <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Name</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${customerName}</td></tr>
+        <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Email</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;"><a href="mailto:${customerEmail}">${customerEmail}</a></td></tr>
+        <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Payment ID</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${intent.id}</td></tr>
+        ${detailRows}
+      </table>
+    `,
+  })
+
+  if (customerEmail) {
+    await r.emails.send({
+      from:    `DaFigaro <${FROM_EMAIL}>`,
+      to:      customerEmail,
+      subject: `Payment confirmed — we're on it`,
+      html: `
+        <p style="font-family:Georgia,serif;font-size:1.1rem;color:#1b1b1b;">Hi ${customerName || 'there'},</p>
+        <p style="font-family:Arial,sans-serif;font-size:14px;color:#333;line-height:1.7;">
+          Your payment for <strong>${serviceLabel}</strong> has been confirmed. We're on it.
+        </p>
+        <p style="font-family:Arial,sans-serif;font-size:14px;color:#333;line-height:1.7;">
+          You'll hear from us within 24–48 business hours. Reply to this email with anything else we should know.
+        </p>
+        <p style="font-family:Arial,sans-serif;font-size:14px;color:#333;line-height:1.7;">— The DaFigaro team</p>
+        <hr style="border:none;border-top:1px solid #e8e0d8;margin:24px 0;" />
+        <p style="font-family:Arial,sans-serif;font-size:11px;color:#7A7A7A;">Reference: ${intent.id}</p>
       `,
     })
   }
