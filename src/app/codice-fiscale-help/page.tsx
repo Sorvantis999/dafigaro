@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import CodiceFiscaleForm from '@/components/CodiceFiscaleForm'
 
 export const metadata: Metadata = {
   title: 'Codice Fiscale Help — DaFigaro',
@@ -56,44 +57,7 @@ export default function CodiceFiscaleHelp() {
         </div>
       </section>
 
-      {/* ── OFFER ── */}
-      <section className="lp-section" id="submit">
-        <div className="container-narrow">
-          <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-            <div className="eyebrow">The Offer</div>
-            <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>Coordinated help, start to finish</h2>
-          </div>
 
-          <div className="lp-offer-box">
-            <div className="offer-icon" style={{ fontSize: '2.4rem' }}>🪪</div>
-            <h2>Codice Fiscale Help</h2>
-            <p style={{ color: 'var(--gray)', fontSize: '0.95rem' }}>
-              We assess your situation, tell you exactly what path to take, and coordinate the process until your codice fiscale is issued. If third parties are required, we tell you upfront and connect you to the right resources — no surprises.
-            </p>
-
-            <ul className="lp-includes">
-              <li>Situation assessment — what path applies to you specifically</li>
-              <li>Full document checklist based on your circumstances</li>
-              <li>Step-by-step instructions or full process coordination</li>
-              <li>Calls made to offices on your behalf if needed</li>
-              <li>Status follow-ups until the codice fiscale is issued</li>
-              <li>Honest assessment if your situation requires a licensed professional</li>
-            </ul>
-
-            <div className="offer-price">from €149</div>
-            <div className="offer-price-note" style={{ marginBottom: '24px' }}>
-              Final price based on your situation. Confirmed before we start.
-            </div>
-
-            <Link href="mailto:hello@dafigaro.com?subject=Codice%20Fiscale%20Request" className="btn-primary" style={{ width: '100%', justifyContent: 'center', fontSize: '1.05rem' }}>
-              Start Your Codice Fiscale Request →
-            </Link>
-            <p style={{ marginTop: '14px', fontSize: '0.8rem', color: 'var(--gray-light)' }}>
-              Tell us your situation. We'll assess it and confirm the exact price before you pay.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* ── HOW IT WORKS ── */}
       <section className="lp-section white" id="how-it-works">
@@ -181,20 +145,15 @@ export default function CodiceFiscaleHelp() {
         </div>
       </section>
 
-      {/* ── SUBMIT ── */}
-      <section className="lp-section white" style={{ textAlign: 'center' }}>
+      {/* ── SUBMIT FORM ── */}
+      <section className="lp-section white" id="submit">
         <div className="container-narrow">
-          <div className="eyebrow">Ready to Start</div>
-          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>Tell us your situation</h2>
-          <p style={{ color: 'var(--gray)', marginBottom: '32px', fontSize: '1rem', lineHeight: '1.75', maxWidth: '520px', margin: '0 auto 32px' }}>
-            Email us at <a href="mailto:hello@dafigaro.com" style={{ color: 'var(--orange)', fontWeight: 600 }}>hello@dafigaro.com</a>. Describe your situation — where you are, what your visa or residency status is, and what's blocking you. We'll assess it and respond within 24–48 hours with a clear path and confirmed price.
+          <div className="eyebrow">Start Your Request</div>
+          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', marginBottom: '8px' }}>Tell us your situation</h2>
+          <p style={{ color: 'var(--gray)', marginBottom: '36px', fontSize: '1rem', lineHeight: '1.65' }}>
+            No payment now. We&apos;ll assess your situation and confirm the path and price before anything is charged.
           </p>
-          <Link href="mailto:hello@dafigaro.com?subject=Codice%20Fiscale%20Request" className="btn-primary">
-            Start Codice Fiscale Request → from €149
-          </Link>
-          <p style={{ marginTop: '14px', fontSize: '0.8rem', color: 'var(--gray-light)' }}>
-            No payment required until we confirm the path and price for your situation.
-          </p>
+          <CodiceFiscaleForm />
         </div>
       </section>
 

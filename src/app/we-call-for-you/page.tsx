@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import CallForYouForm from '@/components/CallForYouForm'
 
 export const metadata: Metadata = {
   title: 'We Call for You — DaFigaro',
@@ -53,39 +54,7 @@ export default function WeCallForYou() {
         </div>
       </section>
 
-      {/* ── OFFER ── */}
-      <section className="lp-section" id="submit">
-        <div className="container-narrow">
-          <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-            <div className="eyebrow">The Offer</div>
-            <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>Exactly what you get for €49</h2>
-          </div>
 
-          <div className="lp-offer-box">
-            <div className="offer-icon" style={{ fontSize: '2.4rem' }}>📞</div>
-            <h2>We Call for You</h2>
-            <p style={{ color: 'var(--gray)', fontSize: '0.95rem' }}>Give us the number and what you need. We make the call, handle everything in Italian, and report back in English.</p>
-
-            <ul className="lp-includes">
-              <li>One complete call made on your behalf in Italian</li>
-              <li>Full written summary of what was discussed and decided</li>
-              <li>Next steps clearly outlined — what you or they need to do</li>
-              <li>Any reference numbers, names, or follow-up info captured</li>
-              <li>One follow-up call if the first one doesn't resolve it</li>
-            </ul>
-
-            <div className="offer-price">€49</div>
-            <div className="offer-price-note" style={{ marginBottom: '24px' }}>Per call · One-time payment · No subscription</div>
-
-            <Link href="mailto:hello@dafigaro.com?subject=Call%20Request" className="btn-primary" style={{ width: '100%', justifyContent: 'center', fontSize: '1.05rem' }}>
-              Tell Us Who to Call → Start Here
-            </Link>
-            <p style={{ marginTop: '14px', fontSize: '0.8rem', color: 'var(--gray-light)' }}>
-              Email us at hello@dafigaro.com with the number, your goal, and any relevant context. We'll confirm and make the call within 24–48 business hours.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* ── HOW IT WORKS ── */}
       <section className="lp-section white" id="how-it-works">
@@ -167,20 +136,15 @@ export default function WeCallForYou() {
         </div>
       </section>
 
-      {/* ── SUBMIT ── */}
-      <section className="lp-section white" style={{ textAlign: 'center' }}>
+      {/* ── SUBMIT FORM ── */}
+      <section className="lp-section white" id="submit">
         <div className="container-narrow">
-          <div className="eyebrow">Ready to Submit</div>
-          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>Tell us who to call</h2>
-          <p style={{ color: 'var(--gray)', marginBottom: '32px', fontSize: '1rem', lineHeight: '1.75', maxWidth: '520px', margin: '0 auto 32px' }}>
-            Email us at <a href="mailto:hello@dafigaro.com" style={{ color: 'var(--orange)', fontWeight: 600 }}>hello@dafigaro.com</a>. Include the phone number, what you need, and any relevant context. We'll confirm receipt, send a payment link, and schedule the call.
+          <div className="eyebrow">Submit Your Request</div>
+          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', marginBottom: '8px' }}>Tell us who to call</h2>
+          <p style={{ color: 'var(--gray)', marginBottom: '36px', fontSize: '1rem', lineHeight: '1.65' }}>
+            Give us the number and what you need. We&apos;ll handle the rest.
           </p>
-          <Link href="mailto:hello@dafigaro.com?subject=Call%20Request" className="btn-primary">
-            Start Call Request → €49
-          </Link>
-          <p style={{ marginTop: '14px', fontSize: '0.8rem', color: 'var(--gray-light)' }}>
-            Response within 24–48 business hours. Secure payment via Stripe.
-          </p>
+          <CallForYouForm />
         </div>
       </section>
 

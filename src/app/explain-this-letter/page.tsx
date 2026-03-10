@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import ExplainLetterForm from '@/components/ExplainLetterForm'
 
 export const metadata: Metadata = {
   title: 'Explain This Letter — DaFigaro',
@@ -53,39 +54,7 @@ export default function ExplainThisLetter() {
         </div>
       </section>
 
-      {/* ── OFFER ── */}
-      <section className="lp-section" id="submit">
-        <div className="container-narrow">
-          <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-            <div className="eyebrow">The Offer</div>
-            <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>Exactly what you get for €29</h2>
-          </div>
 
-          <div className="lp-offer-box">
-            <div className="offer-icon" style={{ fontSize: '2.4rem' }}>📄</div>
-            <h2>Explain This Letter</h2>
-            <p style={{ color: 'var(--gray)', fontSize: '0.95rem' }}>Upload your letter. We review it and send you a clear explanation in English.</p>
-
-            <ul className="lp-includes">
-              <li>Full translation and plain-English explanation of the letter</li>
-              <li>Urgency assessment — what happens if you don't respond and when</li>
-              <li>Recommended next steps, clearly stated</li>
-              <li>Any forms, deadlines, or contact details you need to know</li>
-              <li>An English summary you can share with your employer, landlord, or family</li>
-            </ul>
-
-            <div className="offer-price">€29</div>
-            <div className="offer-price-note" style={{ marginBottom: '24px' }}>Per letter · One-time payment · No subscription</div>
-
-            <Link href="mailto:hello@dafigaro.com?subject=Letter%20Explanation%20Request" className="btn-primary" style={{ width: '100%', justifyContent: 'center', fontSize: '1.05rem' }}>
-              Upload Your Letter → Start Here
-            </Link>
-            <p style={{ marginTop: '14px', fontSize: '0.8rem', color: 'var(--gray-light)' }}>
-              Email your letter to hello@dafigaro.com or use the form above. We respond within 24–48 business hours.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* ── HOW IT WORKS ── */}
       <section className="lp-section white" id="how-it-works">
@@ -167,20 +136,15 @@ export default function ExplainThisLetter() {
         </div>
       </section>
 
-      {/* ── SUBMIT FORM PLACEHOLDER ── */}
-      <section className="lp-section white" style={{ textAlign: 'center' }}>
+      {/* ── SUBMIT FORM ── */}
+      <section className="lp-section white" id="submit">
         <div className="container-narrow">
-          <div className="eyebrow">Ready to Submit</div>
-          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>Send us your letter</h2>
-          <p style={{ color: 'var(--gray)', marginBottom: '32px', fontSize: '1rem', lineHeight: '1.75' }}>
-            Email us at <a href="mailto:hello@dafigaro.com" style={{ color: 'var(--orange)', fontWeight: 600 }}>hello@dafigaro.com</a> with your letter attached. Include your name and any context that would help us understand the situation. We'll send you a payment link and get started right away.
+          <div className="eyebrow">Submit Your Request</div>
+          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', marginBottom: '8px' }}>Upload your letter</h2>
+          <p style={{ color: 'var(--gray)', marginBottom: '36px', fontSize: '1rem', lineHeight: '1.65' }}>
+            Fill in the form, attach your letter, and we&apos;ll take it from there.
           </p>
-          <Link href="mailto:hello@dafigaro.com?subject=Letter%20Explanation%20Request" className="btn-primary">
-            Send Your Letter → €29
-          </Link>
-          <p style={{ marginTop: '14px', fontSize: '0.8rem', color: 'var(--gray-light)' }}>
-            Response within 24–48 business hours. Secure payment via Stripe.
-          </p>
+          <ExplainLetterForm />
         </div>
       </section>
 
