@@ -9,8 +9,8 @@ export default function Nav() {
           <Image
             src="/assets/dafigaro-full.svg"
             alt="DaFigaro"
-            width={140}
-            height={40}
+            width={168}
+            height={48}
             priority
           />
         </Link>

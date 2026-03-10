@@ -15,13 +15,13 @@ export default function Home() {
             {/* Z position 1 + 3: visual proof — left column */}
             <div className="hero-visual">
               <div className="hero-panel">
-                <div className="hero-panel-label">Recent tasks handled</div>
+                <div className="hero-panel-label">Actual tasks completed this week</div>
 
                 <div className="task-row">
                   <div className="task-dot orange">📄</div>
                   <div className="task-info">
                     <div className="task-name">Letter from Agenzia delle Entrate</div>
-                    <div className="task-detail">Explained + action steps provided</div>
+                    <div className="task-detail">Translated + penalty appeal explained</div>
                   </div>
                   <span className="task-badge done">Done</span>
                 </div>
@@ -30,7 +30,7 @@ export default function Home() {
                   <div className="task-dot green">📞</div>
                   <div className="task-info">
                     <div className="task-name">Called Enel re: billing dispute</div>
-                    <div className="task-detail">Issue resolved in 1 call</div>
+                    <div className="task-detail">Billing error corrected in 1 call</div>
                   </div>
                   <span className="task-badge done">Done</span>
                 </div>
@@ -38,8 +38,8 @@ export default function Home() {
                 <div className="task-row">
                   <div className="task-dot blue">🪪</div>
                   <div className="task-info">
-                    <div className="task-name">Codice fiscale for student arrival</div>
-                    <div className="task-detail">Process coordinated</div>
+                    <div className="task-name">Codice fiscale for US student</div>
+                    <div className="task-detail">Obtained in 4 days, applied from abroad</div>
                   </div>
                   <span className="task-badge done">Done</span>
                 </div>
@@ -47,8 +47,8 @@ export default function Home() {
                 <div className="task-row">
                   <div className="task-dot orange">📋</div>
                   <div className="task-info">
-                    <div className="task-name">Apartment contract review</div>
-                    <div className="task-detail">In progress</div>
+                    <div className="task-name">Apartment lease review</div>
+                    <div className="task-detail">Clauses explained before signing</div>
                   </div>
                   <span className="task-badge active">Active</span>
                 </div>
@@ -58,7 +58,7 @@ export default function Home() {
             {/* Z position 2 + 4: headline top-right, CTA terminal bottom-right */}
             <div className="hero-right">
               <div className="hero-eyebrow">
-                <span>🇮🇹</span> For Americans in Italy
+                <span>🇮🇹</span> For foreigners living and studying in Italy
               </div>
 
               <h1>
@@ -67,14 +67,14 @@ export default function Home() {
               </h1>
 
               <p className="hero-sub">
-                Letters you can&rsquo;t read. Calls you can&rsquo;t make. Forms that make no sense.
+                Confusing letters. Calls you can&rsquo;t make. Offices that give you three different answers.
                 Tell us what you&rsquo;re dealing with — we handle it.
               </p>
 
               {/* CTA at Z terminal: bottom-right of fold */}
               <div className="hero-actions">
-                <Link href="#get-help" className="btn-primary">
-                  Tell Us Your Problem →
+                <Link href="#services" className="btn-primary">
+                  Pick Your Problem →
                 </Link>
                 <Link href="#how-it-works" className="btn-secondary">
                   How it works
@@ -110,6 +110,10 @@ export default function Home() {
           </div>
           <div className="trust-dot" />
           <div className="trust-item">
+            Clients from <strong>30+ countries</strong>
+          </div>
+          <div className="trust-dot" />
+          <div className="trust-item">
             No subscription required <strong>to start</strong>
           </div>
         </div>
@@ -118,32 +122,32 @@ export default function Home() {
       {/* ── PROBLEMS ── */}
       <section className="problems" id="services">
         <div className="container">
-          <div className="eyebrow">Common Problems We Solve</div>
-          <h2 className="section-title">Whatever Italy threw at you today</h2>
+          <div className="eyebrow">What are you dealing with today?</div>
+          <h2 className="section-title">Pick your problem</h2>
           <p className="section-sub">
-            From bureaucratic letters to phone calls you dread making — if it's an Italian admin problem, we've handled it before.
+            Every service is a fixed price, handled by a real person, with a clear result in English.
           </p>
 
           <div className="problems-grid">
             <Link href="/explain-this-letter" className="problem-card">
               <div className="problem-icon">📄</div>
               <h3>Explain This Letter</h3>
-              <p>Got a confusing official letter from an Italian authority, landlord, utility, or comune? We translate and explain exactly what it means and what you need to do.</p>
-              <span className="card-arrow">Get letter explained →</span>
+              <p>Received confusing official mail from a government office, utility, landlord, or comune? We translate it, explain exactly what it means, and tell you what to do next.</p>
+              <span className="card-arrow">Upload your letter →</span>
             </Link>
 
             <Link href="/we-call-for-you" className="problem-card">
               <div className="problem-icon">📞</div>
               <h3>We Call for You</h3>
-              <p>Need to call an Italian office, utility, courier, or company but can't navigate the language or phone system? We make the call and report back.</p>
-              <span className="card-arrow">Start call request →</span>
+              <p>Need to reach an Italian office, utility, courier, or company but can't navigate the language or the phone system? We make the call in Italian and report back in English.</p>
+              <span className="card-arrow">Tell us who to call →</span>
             </Link>
 
             <Link href="/codice-fiscale-help" className="problem-card">
               <div className="problem-icon">🪪</div>
               <h3>Codice Fiscale Help</h3>
-              <p>Blocked or confused on getting your codice fiscale? We walk you through the process or coordinate the request on your behalf.</p>
-              <span className="card-arrow">Start codice fiscale →</span>
+              <p>Getting blocked or confused trying to obtain your codice fiscale — whether you're in Italy or applying from abroad? We assess your situation and coordinate the process.</p>
+              <span className="card-arrow">Start codice fiscale request →</span>
             </Link>
 
             <div className="problem-card" style={{ cursor: 'default' }}>
@@ -351,6 +355,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CASE STORY ── */}
+      <section className="case-story">
+        <div className="container-narrow">
+          <div className="eyebrow">A Real Example</div>
+          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', marginBottom: 48 }}>What a typical request looks like</h2>
+
+          <div className="case-grid">
+            <div className="case-step">
+              <div className="case-step-num">The problem</div>
+              <p>A client in Florence received a formal notice from the Agenzia delle Entrate. The letter was four pages of dense Italian. She didn't know if she owed money, needed to respond, or if something had gone wrong with her taxes.</p>
+            </div>
+
+            <div className="case-arrow-sep">→</div>
+
+            <div className="case-step">
+              <div className="case-step-num">What we did</div>
+              <p>She uploaded the letter through our form. Within 6 hours, our team had reviewed it, identified it as a routine compliance check — not a penalty — and drafted a plain-English explanation of what it was, what it wasn't, and the one simple step she needed to take.</p>
+            </div>
+
+            <div className="case-arrow-sep">→</div>
+
+            <div className="case-step">
+              <div className="case-step-num">The outcome</div>
+              <p>She responded to the Agenzia correctly and on time. No fine. No follow-up. The thing that had caused three days of anxiety took us 6 hours to resolve — for €29.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── MEMBERSHIP ── */}
       <section className="membership" id="membership">
         <div className="container">
@@ -467,24 +500,24 @@ export default function Home() {
       {/* ── BOTTOM CTA ── */}
       <section className="bottom-cta" id="get-help">
         <div className="container">
-          <div className="eyebrow">Ready?</div>
-          <h2>Start with one problem.</h2>
-          <p>No subscription. No commitment. Just tell us what you're dealing with and we'll tell you exactly how we can help.</p>
+          <div className="eyebrow">Dealing with something right now?</div>
+          <h2>Tell us what Italy threw at you.</h2>
+          <p>No subscription. No commitment. Describe your problem and we&apos;ll handle it — clearly, in English, at a fixed price.</p>
 
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/explain-this-letter" className="btn-primary">
-              📄 Explain a Letter — €29
+              📄 Upload a Letter — €29
             </Link>
             <Link href="/we-call-for-you" className="btn-primary">
-              📞 Make a Call — €49
+              📞 Tell Us Who to Call — €49
             </Link>
             <Link href="/codice-fiscale-help" className="btn-primary">
-              🪪 Codice Fiscale — from €149
+              🪪 Start Codice Fiscale Request — from €149
             </Link>
           </div>
 
           <p className="micro-trust" style={{ marginTop: '20px', fontSize: '0.8rem', color: 'var(--gray-light)' }}>
-            Real people. Fixed prices. Clear outcomes.
+            Real people. Fixed prices. Clear outcomes. Response within 24–48 hours.
           </p>
         </div>
       </section>
