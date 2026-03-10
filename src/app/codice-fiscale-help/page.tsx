@@ -19,10 +19,10 @@ export default function CodiceFiscaleHelp() {
         <div className="container-narrow">
           <div className="eyebrow" style={{ textAlign: 'center', display: 'block' }}>Codice Fiscale Help</div>
           <h1>
-            Need a codice fiscale<br />and <em>don't know where to start?</em>
+            Everything in Italy starts with a codice fiscale.<br /><em>Without one, you&apos;re stuck at zero.</em>
           </h1>
           <p className="lp-hero-sub">
-            The codice fiscale is Italy's tax identification number — you need it for almost everything. Getting one as a foreigner involves navigating offices, paperwork, and processes that assume you already know how it works. We do.
+            Can&apos;t open the bank account. Can&apos;t sign the lease. Can&apos;t register for anything. Tell us your situation — we find the right path and coordinate everything until it&apos;s done.
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="#submit" className="btn-primary">

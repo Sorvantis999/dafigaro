@@ -19,10 +19,10 @@ export default function WeCallForYou() {
         <div className="container-narrow">
           <div className="eyebrow" style={{ textAlign: 'center', display: 'block' }}>We Call for You</div>
           <h1>
-            Need someone to call<br />in <em>Italian for you?</em>
+            He spent 40 minutes on hold with Enel.<br /><em>Got transferred twice. Then the line went dead.</em>
           </h1>
           <p className="lp-hero-sub">
-            Italian phone systems are a gauntlet — long holds, automated menus in Italian, and staff who don't speak English. Skip all of it. Give us the number and what you need. We handle the call.
+            He submitted a DaFigaro call request that afternoon. By evening he had a written summary of what was agreed and what happens next. €49.
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="#submit" className="btn-primary">

@@ -19,10 +19,10 @@ export default function ExplainThisLetter() {
         <div className="container-narrow">
           <div className="eyebrow" style={{ textAlign: 'center', display: 'block' }}>Explain This Letter</div>
           <h1>
-            Got a letter from Italy<br />you <em>don't understand?</em>
+            She got a letter from the Agenzia delle Entrate.<br /><em>She didn't open it for a week.</em>
           </h1>
           <p className="lp-hero-sub">
-            Official mail from Italian authorities, utilities, landlords, and agencies is dense, bureaucratic, and often alarming if you don't know what you're looking at. We do.
+            Then she uploaded it to DaFigaro. Six hours later she knew exactly what it was, what it wasn&apos;t, and the one thing she needed to do. €29.
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="#submit" className="btn-primary">
