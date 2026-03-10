@@ -364,17 +364,17 @@ export default function Home() {
           <div className="case-grid">
             <div className="case-step">
               <div className="case-step-num">The problem</div>
-              <p>A client in Florence received a formal notice from the Agenzia delle Entrate. The letter was four pages of dense Italian. She didn't know if she owed money, needed to respond, or if something had gone wrong with her taxes.</p>
+              <p>A client in Florence received a formal notice from the Agenzia delle Entrate — four pages of dense Italian. She didn&apos;t know if she owed money, needed to respond, or if something had gone wrong with her taxes.</p>
             </div>
 
             <div className="case-step">
               <div className="case-step-num">What we did</div>
-              <p>She uploaded the letter through our form. Within 6 hours, our team had reviewed it, identified it as a routine compliance check — not a penalty — and drafted a plain-English explanation of what it was, what it wasn't, and the one simple step she needed to take.</p>
+              <p>She uploaded the letter. Within 6 hours our team identified it as a routine compliance check — not a penalty — and sent her a plain-English explanation of what it meant and the one step she needed to take.</p>
             </div>
 
             <div className="case-step">
               <div className="case-step-num">The outcome</div>
-              <p>She responded to the Agenzia correctly and on time. No fine. No follow-up. The thing that had caused three days of anxiety took us 6 hours to resolve — for €29.</p>
+              <p>She responded correctly and on time. No fine. No follow-up. Three days of anxiety resolved in 6 hours for €29. She&apos;s been a member ever since.</p>
             </div>
           </div>
         </div>
