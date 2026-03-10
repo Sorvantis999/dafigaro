@@ -123,6 +123,29 @@ export async function POST(req: NextRequest) {
         </table>
         <p style="margin-top:24px;font-family:Arial,sans-serif;font-size:12px;color:#7A7A7A;">Submitted via DaFigaro.com · Service: Codice Fiscale Help · from €149</p>
       `
+    } else if (serviceType === 'contact') {
+      const regarding = formData.get('regarding') as string
+      const message = formData.get('message') as string
+
+      const regardingLabels: Record<string, string> = {
+        'bank-account':       'Bank Account Help',
+        'forms-admin':        'Forms & Admin',
+        'find-professional':  'Find a Professional',
+        'other':              'General Enquiry',
+      }
+      const label = regardingLabels[regarding] || regarding || 'General Enquiry'
+
+      subject = `[Contact] ${label} — from ${name}`
+      htmlBody = `
+        <h2 style="color:#D87A4A;font-family:Georgia,serif;">New Contact Request</h2>
+        <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;">
+          <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;width:160px;">Name</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${name}</td></tr>
+          <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Email</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;"><a href="mailto:${email}">${email}</a></td></tr>
+          <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Regarding</td><td style="padding:8px 12px;border-bottom:1px solid #e8e0d8;">${label}</td></tr>
+          <tr><td style="padding:8px 12px;background:#f5f0eb;font-weight:bold;">Message</td><td style="padding:8px 12px;">${message ? message.replace(/\n/g, '<br>') : '<em>None provided</em>'}</td></tr>
+        </table>
+        <p style="margin-top:24px;font-family:Arial,sans-serif;font-size:12px;color:#7A7A7A;">Submitted via DaFigaro.com · Contact form</p>
+      `
     } else {
       return NextResponse.json({ error: 'Unknown service type.' }, { status: 400 })
     }

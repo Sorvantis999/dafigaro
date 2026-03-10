@@ -19,7 +19,8 @@ export default function Nav() {
           <Link href="/#how-it-works">How it works</Link>
           <Link href="/#pricing">Pricing</Link>
           <Link href="/#faq">FAQ</Link>
-          <Link href="/#get-help" className="nav-cta">
+          <Link href="/contact">Contact</Link>
+          <Link href="/contact" className="nav-cta">
             Get Help Now →
           </Link>
         </div>

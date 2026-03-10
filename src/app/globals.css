@@ -1579,3 +1579,40 @@ details.faq-item[open] summary::after {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== REGARDING BUTTONS ===== */
+.regarding-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.regarding-btn {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--black-light);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+}
+
+.regarding-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.regarding-btn.active {
+  border-color: var(--orange);
+  background: var(--orange-light);
+  color: var(--orange);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .regarding-grid { grid-template-columns: 1fr; }
+}

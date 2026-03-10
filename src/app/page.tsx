@@ -150,26 +150,26 @@ export default function Home() {
               <span className="card-arrow">Start codice fiscale request →</span>
             </Link>
 
-            <div className="problem-card" style={{ cursor: 'default' }}>
+            <Link href="/contact?re=bank-account" className="problem-card">
               <div className="problem-icon">🏦</div>
               <h3>Bank Account Help</h3>
-              <p>Italian banks are notoriously difficult for foreigners. We help you understand the requirements and navigate the process.</p>
-              <span className="card-arrow" style={{ color: 'var(--gray)' }}>Coming soon</span>
-            </div>
+              <p>Italian banks are notoriously difficult for foreigners. Tell us your situation and we'll let you know how we can help.</p>
+              <span className="card-arrow">Get in touch →</span>
+            </Link>
 
-            <div className="problem-card" style={{ cursor: 'default' }}>
+            <Link href="/contact?re=forms-admin" className="problem-card">
               <div className="problem-icon">📋</div>
               <h3>Forms & Admin</h3>
               <p>Forms from INPS, your comune, tax authorities, or landlords — we explain what's being asked and help you fill them correctly.</p>
-              <span className="card-arrow" style={{ color: 'var(--gray)' }}>Coming soon</span>
-            </div>
+              <span className="card-arrow">Get in touch →</span>
+            </Link>
 
-            <div className="problem-card" style={{ cursor: 'default' }}>
+            <Link href="/contact?re=find-professional" className="problem-card">
               <div className="problem-icon">🔍</div>
               <h3>Find the Right Professional</h3>
               <p>Need a lawyer, commercialista, notaio, or translator? We know the network and can connect you to the right English-speaking expert.</p>
-              <span className="card-arrow" style={{ color: 'var(--gray)' }}>Coming soon</span>
-            </div>
+              <span className="card-arrow">Get in touch →</span>
+            </Link>
           </div>
         </div>
       </section>
