@@ -94,6 +94,101 @@ export default function LpCallForYou() {
         </div>
       </section>
 
+      {/* ── AGITATION ── */}
+      <section className="lp-ad-section">
+        <div className="container-narrow">
+          <h2 className="lp-ad-section-title">Here&apos;s why calling Italian offices is not like calling anywhere else.</h2>
+          <div className="lp-body-copy">
+            <p>Italian phone systems have unique friction: automated menus that assume Italian fluency, staff who will simply stop responding if they sense a language barrier, hold logic that disconnects after a set time, and offices that won&apos;t repeat themselves. Getting transferred often means starting over — new queue, new hold, new person who has no record of the previous conversation.</p>
+            <p>Beyond the language, there&apos;s a navigational knowledge gap. Knowing which department handles which problem, which reference number to lead with, which phrase unlocks cooperation — this comes from experience. Our team has it. You don&apos;t have to acquire it.</p>
+            <p>You pay €49. We make the call. You get the result in writing. That&apos;s the trade.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHO WE CALL ── */}
+      <section className="lp-ad-section lp-ad-section-alt">
+        <div className="container-narrow">
+          <h2 className="lp-ad-section-title">We&apos;ve called all of these.</h2>
+          <div className="lp-deliverables-grid">
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">⚡</div>
+              <h4>Utilities</h4>
+              <p>Enel, Eni, Edison, A2A, local water and gas companies. Disputed bills, meter readings, contract issues, activation delays.</p>
+            </div>
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">🏛️</div>
+              <h4>Government offices</h4>
+              <p>Questura, Comune, Agenzia delle Entrate, INPS, ASL. Permit status, registration, appointments, document status.</p>
+            </div>
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">🏦</div>
+              <h4>Banks and institutions</h4>
+              <p>Account issues, blocked transactions, document requests, appointment booking, complaint escalation.</p>
+            </div>
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">📦</div>
+              <h4>Couriers and logistics</h4>
+              <p>DHL, BRT, GLS, SDA, Poste Italiane. Missing parcels, failed deliveries, re-routing, customs holds.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EXAMPLES ── */}
+      <section className="lp-ad-section">
+        <div className="container-narrow">
+          <h2 className="lp-ad-section-title">Calls we&apos;ve handled.</h2>
+          <div className="lp-examples-grid">
+            <div className="lp-example">
+              <div className="lp-example-icon">💡</div>
+              <p>Called Enel about a disputed electricity bill. Billing error confirmed. Credit applied to next invoice.</p>
+              <div className="lp-example-result">Error corrected. Case closed. Summary sent.</div>
+            </div>
+            <div className="lp-example">
+              <div className="lp-example-icon">🪪</div>
+              <p>Queried the Questura about a pending permit renewal. Status confirmed. No further action required.</p>
+              <div className="lp-example-result">Timeline confirmed. Anxiety resolved.</div>
+            </div>
+            <div className="lp-example">
+              <div className="lp-example-icon">📦</div>
+              <p>Chased a missing courier delivery that had been bouncing between depots for 10 days.</p>
+              <div className="lp-example-result">Located. Re-routed to correct address. Delivered next day.</div>
+            </div>
+            <div className="lp-example">
+              <div className="lp-example-icon">🏠</div>
+              <p>Called a building administrator about a disputed lease clause before the client signed.</p>
+              <div className="lp-example-result">Clause clarified. Client negotiated from a position of knowledge.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── OBJECTIONS ── */}
+      <section className="lp-ad-section lp-ad-section-alt">
+        <div className="container-narrow">
+          <h2 className="lp-ad-section-title">Before you submit.</h2>
+          <div className="lp-faq">
+            <div className="lp-faq-item">
+              <h4>What if the call doesn&apos;t resolve it?</h4>
+              <p>We tell you exactly what was said, what was refused, and what the next step is. Sometimes one call closes it. Sometimes it takes escalation or a follow-up — we&apos;ll tell you the path. You won&apos;t be left with nothing.</p>
+            </div>
+            <div className="lp-faq-item">
+              <h4>What if the office won&apos;t cooperate or I need to be on the call?</h4>
+              <p>We&apos;ll tell you before we start if authorization is needed. Some institutions require the account holder to verify identity. We&apos;ll brief you exactly on what to say so you can do that part in 60 seconds and hand it back.</p>
+            </div>
+            <div className="lp-faq-item">
+              <h4>Is €49 the real price or does it go up?</h4>
+              <p>€49 covers one call, one issue. If you need a follow-up call on the same issue, we charge the same rate. No surprises. You confirm before anything starts.</p>
+            </div>
+            <div className="lp-faq-item">
+              <h4>What do I get at the end?</h4>
+              <p>A written summary in English of what was discussed, what was agreed or refused, what reference numbers or case IDs came up, and exactly what happens next — including any action required from you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── BOTTOM CTA ── */}
       <section className="lp-ad-section lp-ad-bottom-cta">
         <div className="container-narrow" style={{ textAlign: 'center' }}>

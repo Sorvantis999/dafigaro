@@ -119,6 +119,72 @@ export default function LpCodiceFiscale() {
         </div>
       </section>
 
+      {/* ── AGITATION ── */}
+      <section className="lp-ad-section">
+        <div className="container-narrow">
+          <h2 className="lp-ad-section-title">Why getting a codice fiscale is harder than it should be.</h2>
+          <div className="lp-body-copy">
+            <p>In theory, it&apos;s just a tax identification number. In practice, the path to getting one varies significantly depending on your nationality, your residency status, where you&apos;re applying from, and which office you approach. The official guidance is spread across multiple government websites, often contradictory, and rarely updated.</p>
+            <p>Apply at the wrong consulate, submit the wrong documents, or misunderstand the process and you can lose weeks — or be told to start over. Students miss enrollment windows. Buyers miss property closings. Workers can&apos;t start. Everything in Italy that requires official registration is blocked until this one number exists.</p>
+            <p>We do this constantly. We know which route applies to your situation, what documents are actually required, and how to get it done without the trial and error.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT WE DO ── */}
+      <section className="lp-ad-section lp-ad-section-alt">
+        <div className="container-narrow">
+          <h2 className="lp-ad-section-title">What &quot;we coordinate the process&quot; actually means.</h2>
+          <div className="lp-deliverables-grid">
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">🗺️</div>
+              <h4>We assess your specific situation</h4>
+              <p>Nationality, current location, residency status, and purpose all determine the right path. We assess yours and tell you exactly which route applies — before you pay anything.</p>
+            </div>
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">📄</div>
+              <h4>We build your document checklist</h4>
+              <p>We tell you exactly which documents you need, in which format, and what each office will actually accept — not what the website says in theory.</p>
+            </div>
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">📞</div>
+              <h4>We handle the office communication</h4>
+              <p>Calls, emails, appointment booking, status follow-up — everything that requires navigating Italian bureaucracy in Italian, we do. You stay informed in English throughout.</p>
+            </div>
+            <div className="lp-deliverable">
+              <div className="lp-deliverable-icon">✅</div>
+              <h4>We follow through to completion</h4>
+              <p>We stay on it until the codice fiscale is issued and confirmed in your hands. Not until we&apos;ve submitted paperwork and called it done — until it&apos;s actually done.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── OBJECTIONS ── */}
+      <section className="lp-ad-section">
+        <div className="container-narrow">
+          <h2 className="lp-ad-section-title">Before you submit.</h2>
+          <div className="lp-faq">
+            <div className="lp-faq-item">
+              <h4>Why does it cost from €149? What determines the final price?</h4>
+              <p>The main variable is complexity — applying as a resident in Italy is simpler than coordinating remotely from abroad through a consulate. We assess your situation first and give you an exact price before you commit. No surprises mid-process.</p>
+            </div>
+            <div className="lp-faq-item">
+              <h4>Can I really get a codice fiscale without being in Italy?</h4>
+              <p>Yes. Non-residents can apply through Italian consulates abroad or, in some cases, through designated authorized intermediaries. We know which approach works for your country and situation. We&apos;ve done this for clients across the US, UK, Canada, Australia, and the EU.</p>
+            </div>
+            <div className="lp-faq-item">
+              <h4>How long does it actually take?</h4>
+              <p>For straightforward cases, typically 3–7 business days once documents are in order. Urgent situations (upcoming property closings, enrollment deadlines) — tell us, and we prioritize. We&apos;ve turned cases around in 48 hours when it mattered.</p>
+            </div>
+            <div className="lp-faq-item">
+              <h4>What if my situation is complicated?</h4>
+              <p>That&apos;s exactly what the assessment is for. If your case requires something beyond our scope — certain legal situations, contested identity documents — we&apos;ll tell you that directly and point you to the right professional. You won&apos;t pay us for something we can&apos;t deliver.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── BOTTOM CTA ── */}
       <section className="lp-ad-section lp-ad-bottom-cta">
         <div className="container-narrow" style={{ textAlign: 'center' }}>

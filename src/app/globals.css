@@ -1916,3 +1916,133 @@ details.faq-item[open] summary::after {
   .lp-ad-nav { padding: 16px 20px; }
   .lp-situations-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== AD LP EXPANDED SECTIONS ===== */
+.lp-body-copy {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.lp-body-copy p {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.lp-body-copy p:last-child { margin-bottom: 0; }
+
+.lp-section-sub {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: -24px auto 40px;
+}
+
+/* Deliverables grid */
+.lp-deliverables-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.lp-deliverable {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+
+.lp-deliverable-icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.lp-deliverable h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.lp-deliverable p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Examples grid */
+.lp-examples-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.lp-example {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.lp-example-icon {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.lp-example p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.65;
+  margin: 0 0 12px 0;
+}
+
+.lp-example-result {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+/* FAQ / Objection handling */
+.lp-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.lp-faq-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.lp-faq-item:first-child { border-top: 1px solid var(--border); }
+
+.lp-faq-item h4 {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.lp-faq-item p {
+  font-size: 0.92rem;
+  color: var(--gray);
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .lp-deliverables-grid,
+  .lp-examples-grid {
+    grid-template-columns: 1fr;
+  }
+}
