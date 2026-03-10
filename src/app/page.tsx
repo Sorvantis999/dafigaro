@@ -357,7 +357,7 @@ export default function Home() {
 
       {/* ── CASE STORY ── */}
       <section className="case-story">
-        <div className="container-narrow">
+        <div className="container">
           <div className="eyebrow">A Real Example</div>
           <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', marginBottom: 48 }}>What a typical request looks like</h2>
 
@@ -367,14 +367,10 @@ export default function Home() {
               <p>A client in Florence received a formal notice from the Agenzia delle Entrate. The letter was four pages of dense Italian. She didn't know if she owed money, needed to respond, or if something had gone wrong with her taxes.</p>
             </div>
 
-            <div className="case-arrow-sep">→</div>
-
             <div className="case-step">
               <div className="case-step-num">What we did</div>
               <p>She uploaded the letter through our form. Within 6 hours, our team had reviewed it, identified it as a routine compliance check — not a penalty — and drafted a plain-English explanation of what it was, what it wasn't, and the one simple step she needed to take.</p>
             </div>
-
-            <div className="case-arrow-sep">→</div>
 
             <div className="case-step">
               <div className="case-step-num">The outcome</div>
