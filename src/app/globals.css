@@ -323,8 +323,8 @@ h1, h2, h3, h4, h5 {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 72px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 64px;
   align-items: center;
 }
 
@@ -1211,7 +1211,7 @@ details.faq-item[open] summary::after {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .hero-visual { order: -1; }
+  /* hero-visual is now first in DOM — correct mobile order already */
   .problems-grid { grid-template-columns: 1fr 1fr; }
   .offers-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
   .why-grid { grid-template-columns: 1fr; }

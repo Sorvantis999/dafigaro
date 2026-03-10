@@ -7,39 +7,12 @@ export default function Home() {
     <>
       <Nav />
 
-      {/* ── HERO ── */}
+      {/* ── HERO — Z-SCAN: visual top-left, headline top-right, CTA terminal bottom-right ── */}
       <section className="hero">
         <div className="container">
           <div className="hero-grid">
-            <div className="hero-left">
-              <div className="hero-eyebrow">
-                <span>🇮🇹</span> For Americans Living & Moving to Italy
-              </div>
 
-              <h1>
-                Stuck with Italian<br />
-                <em>paperwork, phone calls,</em><br />
-                or bureaucracy?
-              </h1>
-
-              <p className="hero-sub">
-                DaFigaro helps foreigners in Italy solve real admin problems — letters you can't read, offices you can't reach, forms you don't understand. Handled in English.
-              </p>
-
-              <div className="hero-actions">
-                <Link href="#get-help" className="btn-primary">
-                  Get Help Now →
-                </Link>
-                <Link href="#how-it-works" className="btn-secondary">
-                  See how it works
-                </Link>
-              </div>
-
-              <p className="hero-micro">
-                <strong>No subscription required.</strong> Start with one task. Real people, real help.
-              </p>
-            </div>
-
+            {/* Z position 1 + 3: visual proof — left column */}
             <div className="hero-visual">
               <div className="hero-panel">
                 <div className="hero-panel-label">Recent tasks handled</div>
@@ -81,6 +54,38 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Z position 2 + 4: headline top-right, CTA terminal bottom-right */}
+            <div className="hero-right">
+              <div className="hero-eyebrow">
+                <span>🇮🇹</span> For Americans in Italy
+              </div>
+
+              <h1>
+                Italian bureaucracy,<br />
+                <em>handled in English.</em>
+              </h1>
+
+              <p className="hero-sub">
+                Letters you can&rsquo;t read. Calls you can&rsquo;t make. Forms that make no sense.
+                Tell us what you&rsquo;re dealing with — we handle it.
+              </p>
+
+              {/* CTA at Z terminal: bottom-right of fold */}
+              <div className="hero-actions">
+                <Link href="#get-help" className="btn-primary">
+                  Tell Us Your Problem →
+                </Link>
+                <Link href="#how-it-works" className="btn-secondary">
+                  How it works
+                </Link>
+              </div>
+
+              <p className="hero-micro">
+                <strong>No subscription required.</strong> Fixed prices. Real people. 24–48h response.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
