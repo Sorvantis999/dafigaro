@@ -358,8 +358,10 @@ export default function Home() {
       {/* ── CASE STORY ── */}
       <section className="case-story">
         <div className="container">
-          <div className="eyebrow">A Real Example</div>
-          <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', marginBottom: 48 }}>What a typical request looks like</h2>
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <div className="eyebrow">A Real Example</div>
+            <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)' }}>What a typical request looks like</h2>
+          </div>
 
           <div className="case-grid">
             <div className="case-step">
