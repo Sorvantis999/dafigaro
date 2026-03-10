@@ -62,8 +62,8 @@ export default function Home() {
               </div>
 
               <h1>
-                Her accountant told her she&rsquo;d need a lawyer.<br />
-                <em>It took us six hours and cost €29.</em>
+                &ldquo;She got a letter from the Agenzia delle Entrate. She didn&rsquo;t sleep for three days.&rdquo;<br />
+                <em>€29 later with DaFigaro, she slept like a baby.</em>
               </h1>
 
               <p className="hero-sub">
