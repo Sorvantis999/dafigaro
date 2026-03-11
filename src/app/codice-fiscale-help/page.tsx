@@ -22,7 +22,7 @@ export default function CodiceFiscaleHelp() {
             Everything in Italy starts with a codice fiscale.<br /><em>Without one, you&apos;re stuck at zero.</em>
           </h1>
           <p className="lp-hero-sub">
-            Can&apos;t open the bank account. Can&apos;t sign the lease. Can&apos;t register for anything. Tell us your situation — we find the right path and coordinate everything until it&apos;s done.
+            Can&apos;t open a bank account? Can&apos;t sign the lease. Can&apos;t register for anything. Tell us your situation — we find the right path and coordinate everything until it&apos;s done.
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="#submit" className="btn-primary">
